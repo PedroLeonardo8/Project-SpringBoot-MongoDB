@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import com.example.workshopspring.services.exception.EmptyDataBase;
 import com.example.workshopspring.services.exception.ObjectNotFoundException;
 
 @ControllerAdvice
@@ -22,5 +23,6 @@ public class ResourceExceptionHandler {
 				request.getRequestURI());
 		return ResponseEntity.status(status).body(err);
 	}
+	
 
 }
