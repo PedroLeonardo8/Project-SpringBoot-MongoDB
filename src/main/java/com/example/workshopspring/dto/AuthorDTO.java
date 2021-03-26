@@ -1,20 +1,21 @@
 package com.example.workshopspring.dto;
 
+import java.io.Serializable;
+
 import com.example.workshopspring.domain.User;
 
-public class UserDTO {
+public class AuthorDTO implements Serializable{
+	private static final long serialVersionUID = 1L;
 
-	private String id;
-	private String name;
-	private String email;
+	public String id;
+	public String name;
 	
-	public UserDTO() {
+	public AuthorDTO() {
 	}
 
-	public UserDTO(User obj) {
+	public AuthorDTO(User obj) {
 		id = obj.getId();
 		name = obj.getName();
-		email = obj.getEmail();
 	}
 
 	public String getId() {
@@ -32,13 +33,6 @@ public class UserDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
 	
 }
